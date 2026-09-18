@@ -1,0 +1,81 @@
+{
+  "dispute_id": "df-demo-005",
+  "processor": "stripe",
+  "processor_transaction_id": "ch_demo_005",
+  "payment_intent_id": "pi_demo_005",
+  "order_id": "order-demo-005",
+  "customer_id": "cus_demo_005",
+  "merchant_name": "Demo Merchant 005",
+  "customer": {
+    "name": "Synthetic Customer 005",
+    "email": "customer005@example.test"
+  },
+  "dispute_amount": 105.0,
+  "transaction_amount": 105.0,
+  "currency": "USD",
+  "reason_code": "4855",
+  "reason_description": "Goods not received",
+  "dispute_phase": "chargeback",
+  "dispute_status": "needs_response",
+  "dispute_received_at": "2026-09-01T10:00:00Z",
+  "response_deadline": "2026-09-25T23:59:59Z",
+  "authorization_at": "2026-08-20T12:00:00Z",
+  "capture_at": "2026-08-20T12:01:10Z",
+  "payment_method": {
+    "type": "card",
+    "brand": "visa",
+    "last4": "4242",
+    "funding": "credit"
+  },
+  "verification": {
+    "avs_result": "Y",
+    "cvv_result": "M",
+    "three_d_secure": {
+      "supported": true,
+      "authenticated": true,
+      "version": "2.2.0",
+      "result": "authenticated"
+    }
+  },
+  "network_context": {
+    "ip_address": "192.0.2.5",
+    "device_id": "device-demo-005",
+    "billing_shipping_match": true
+  },
+  "order": {
+    "product_description": "Synthetic product 005",
+    "quantity": 1,
+    "order_created_at": "2026-08-20T11:55:00Z",
+    "terms_version": "terms-2026-08",
+    "refund_policy_version": "refund-policy-2026-08"
+  },
+  "shipping": {
+    "carrier": "",
+    "tracking_number": "",
+    "shipping_status": "unknown",
+    "shipped_at": null,
+    "delivered_at": null,
+    "signature_required": false,
+    "signature_obtained": false
+  },
+  "customer_communications": [],
+  "refund_history": [],
+  "usage_records": [],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-df-demo-005-invoice",
+      "type": "invoice",
+      "title": "Synthetic invoice",
+      "repository_path": "disputes/artifacts/df-demo-005/invoice.json",
+      "sha256": "25eca92de14b9a508b0daf221c8b92231256b3c7f06d5b291290bde2a667b84b"
+    },
+    {
+      "artifact_id": "artifact-df-demo-005-order_record",
+      "type": "order",
+      "title": "Synthetic order record",
+      "repository_path": "disputes/artifacts/df-demo-005/order_record.json",
+      "sha256": "cc14622abe0881dacd175335b19f7f936f301754318a8939aab3cb9da01f4d4e"
+    }
+  ],
+  "expected_demo_outcome": "human_review"
+}

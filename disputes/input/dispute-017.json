@@ -1,0 +1,66 @@
+{
+  "dispute_id": "df-demo-017",
+  "processor": "stripe",
+  "processor_transaction_id": "ch_demo_017",
+  "payment_intent_id": "pi_demo_017",
+  "order_id": "order-demo-017",
+  "customer_id": "cus_demo_017",
+  "merchant_name": "Demo Merchant 017",
+  "customer": {
+    "name": "Synthetic Customer 017",
+    "email": "customer017@example.test"
+  },
+  "dispute_amount": 117.0,
+  "transaction_amount": 117.0,
+  "currency": "USD",
+  "reason_code": "4837",
+  "reason_description": "No cardholder authorization",
+  "dispute_phase": "chargeback",
+  "dispute_status": "needs_response",
+  "dispute_received_at": "2026-09-01T10:00:00Z",
+  "response_deadline": "2026-09-25T23:59:59Z",
+  "authorization_at": "2026-08-20T12:00:00Z",
+  "capture_at": "2026-08-20T12:01:10Z",
+  "payment_method": {
+    "type": "card",
+    "brand": "visa",
+    "last4": "4242",
+    "funding": "credit"
+  },
+  "verification": {
+    "avs_result": "N",
+    "cvv_result": "N",
+    "three_d_secure": {
+      "supported": false,
+      "authenticated": false,
+      "version": "",
+      "result": "unavailable"
+    }
+  },
+  "network_context": {
+    "ip_address": "",
+    "device_id": "",
+    "billing_shipping_match": true
+  },
+  "order": {
+    "product_description": "Synthetic product 017",
+    "quantity": 1,
+    "order_created_at": "2026-08-20T11:55:00Z",
+    "terms_version": "terms-2026-08",
+    "refund_policy_version": "refund-policy-2026-08"
+  },
+  "shipping": null,
+  "customer_communications": [],
+  "refund_history": [],
+  "usage_records": [],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-df-demo-017-invoice",
+      "type": "invoice",
+      "title": "Synthetic invoice",
+      "repository_path": "disputes/artifacts/df-demo-017/invoice.json",
+      "sha256": "a58336059b4092adf92ff2bc4a4643c7900d0e29a59da7176cdbdb8be4e386c8"
+    }
+  ],
+  "expected_demo_outcome": "human_review"
+}

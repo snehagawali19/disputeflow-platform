@@ -1,0 +1,95 @@
+{
+  "dispute_id": "df-demo-003",
+  "processor": "stripe",
+  "processor_transaction_id": "ch_demo_003",
+  "payment_intent_id": "pi_demo_003",
+  "order_id": "order-demo-003",
+  "customer_id": "cus_demo_003",
+  "merchant_name": "Demo Merchant 003",
+  "customer": {
+    "name": "Synthetic Customer 003",
+    "email": "customer003@example.test"
+  },
+  "dispute_amount": 103.0,
+  "transaction_amount": 103.0,
+  "currency": "USD",
+  "reason_code": "10.4",
+  "reason_description": "Fraudulent transaction",
+  "dispute_phase": "chargeback",
+  "dispute_status": "needs_response",
+  "dispute_received_at": "2026-09-01T10:00:00Z",
+  "response_deadline": "2026-09-25T23:59:59Z",
+  "authorization_at": "2026-08-20T12:00:00Z",
+  "capture_at": "2026-08-20T12:01:10Z",
+  "payment_method": {
+    "type": "card",
+    "brand": "visa",
+    "last4": "4242",
+    "funding": "credit"
+  },
+  "verification": {
+    "avs_result": "N",
+    "cvv_result": "M",
+    "three_d_secure": {
+      "supported": true,
+      "authenticated": true,
+      "version": "2.2.0",
+      "result": "authenticated"
+    }
+  },
+  "network_context": {
+    "ip_address": "192.0.2.3",
+    "device_id": "device-demo-003",
+    "billing_shipping_match": false
+  },
+  "order": {
+    "product_description": "Synthetic product 003",
+    "quantity": 1,
+    "order_created_at": "2026-08-20T11:55:00Z",
+    "terms_version": "terms-2026-08",
+    "refund_policy_version": "refund-policy-2026-08"
+  },
+  "shipping": {
+    "carrier": "UPS",
+    "tracking_number": "1ZDEMO003",
+    "shipping_status": "delivered",
+    "shipped_at": "2026-08-21T09:00:00Z",
+    "delivered_at": "2026-08-24T15:30:00Z",
+    "signature_required": true,
+    "signature_obtained": true
+  },
+  "customer_communications": [
+    {
+      "channel": "email",
+      "occurred_at": "2026-08-25T09:00:00Z",
+      "direction": "outbound",
+      "summary": "Synthetic support communication 003"
+    }
+  ],
+  "refund_history": [],
+  "usage_records": [],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-df-demo-003-invoice",
+      "type": "invoice",
+      "title": "Synthetic invoice",
+      "repository_path": "disputes/artifacts/df-demo-003/invoice.json",
+      "sha256": "dcbed1134f48d6e58fdb7d71ef51c8604e91e73480783cb661478926a7121ba3"
+    },
+    {
+      "artifact_id": "artifact-df-demo-003-authentication_result",
+      "type": "authentication",
+      "title": "Synthetic authentication result",
+      "repository_path": "disputes/artifacts/df-demo-003/authentication_result.json",
+      "sha256": "c7aff68459a5e90bf7623829926919f9ad4ab29335dd8bcd6f269b738327d09d"
+    },
+    {
+      "artifact_id": "artifact-df-demo-003-order_record",
+      "type": "order",
+      "title": "Synthetic order record",
+      "repository_path": "disputes/artifacts/df-demo-003/order_record.json",
+      "sha256": "a24f186246638c920b0f43bca9b1fa30605ee7a7ee5263cc32953102bf3d9040"
+    }
+  ],
+  "expected_demo_outcome": "human_review"
+}

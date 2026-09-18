@@ -1,0 +1,73 @@
+{
+  "dispute_id": "df-demo-002",
+  "processor": "stripe",
+  "processor_transaction_id": "ch_demo_002",
+  "payment_intent_id": "pi_demo_002",
+  "order_id": "order-demo-002",
+  "customer_id": "cus_demo_002",
+  "merchant_name": "Demo Merchant 002",
+  "customer": {
+    "name": "Synthetic Customer 002",
+    "email": "customer002@example.test"
+  },
+  "dispute_amount": 87.4,
+  "transaction_amount": 87.4,
+  "currency": "USD",
+  "reason_code": "4837",
+  "reason_description": "No cardholder authorization",
+  "dispute_phase": "chargeback",
+  "dispute_status": "needs_response",
+  "dispute_received_at": "2026-09-01T10:00:00Z",
+  "response_deadline": "2026-09-25T23:59:59Z",
+  "authorization_at": "2026-08-20T12:00:00Z",
+  "capture_at": "2026-08-20T12:01:10Z",
+  "payment_method": {
+    "type": "card",
+    "brand": "visa",
+    "last4": "4242",
+    "funding": "credit"
+  },
+  "verification": {
+    "avs_result": "U",
+    "cvv_result": "N",
+    "three_d_secure": {
+      "supported": true,
+      "authenticated": false,
+      "version": "2.1.0",
+      "result": "failed"
+    }
+  },
+  "network_context": {
+    "ip_address": "192.0.2.2",
+    "device_id": "device-demo-002",
+    "billing_shipping_match": true
+  },
+  "order": {
+    "product_description": "Synthetic product 002",
+    "quantity": 1,
+    "order_created_at": "2026-08-20T11:55:00Z",
+    "terms_version": "terms-2026-08",
+    "refund_policy_version": "refund-policy-2026-08"
+  },
+  "shipping": null,
+  "customer_communications": [],
+  "refund_history": [],
+  "usage_records": [],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-df-demo-002-invoice",
+      "type": "invoice",
+      "title": "Synthetic invoice",
+      "repository_path": "disputes/artifacts/df-demo-002/invoice.json",
+      "sha256": "671cf19e1ba5728d007fc96fdb8411ec606681393d404d0820ddcc884eb0f508"
+    },
+    {
+      "artifact_id": "artifact-df-demo-002-authentication_result",
+      "type": "authentication",
+      "title": "Synthetic authentication result",
+      "repository_path": "disputes/artifacts/df-demo-002/authentication_result.json",
+      "sha256": "be3ad01d38bd2d42223601614990bfc39893d7e69a64186ec43c1ff3e27e1f1d"
+    }
+  ],
+  "expected_demo_outcome": "human_review"
+}

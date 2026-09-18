@@ -1,0 +1,20 @@
+[
+  {
+    "id": "pnr-address-only",
+    "reason_code": "product_not_received",
+    "dispute_amount": 15000,
+    "shipping_address": "1 Test Street",
+    "expected_no_types": ["delivery_proof", "signed_delivery"],
+    "notes": "A shipping address is not delivery confirmation."
+  },
+  {
+    "id": "fraud-auth-flags",
+    "reason_code": "fraudulent",
+    "dispute_amount": 8000,
+    "avs_match": true,
+    "cvv_verified": true,
+    "three_ds_authenticated": true,
+    "expected_types": ["avs_cvv_verification", "3ds_authentication", "transaction_receipt"],
+    "notes": "Auth flags must appear as supplied types, not invented tracking."
+  }
+]

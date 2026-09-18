@@ -1,0 +1,123 @@
+{
+  "dispute_id": "df-demo-016",
+  "processor": "stripe",
+  "processor_transaction_id": "ch_demo_016",
+  "payment_intent_id": "pi_demo_016",
+  "order_id": "order-demo-016",
+  "customer_id": "cus_demo_016",
+  "merchant_name": "Demo Merchant 016",
+  "customer": {
+    "name": "Synthetic Customer 016",
+    "email": "customer016@example.test"
+  },
+  "dispute_amount": 32.5,
+  "transaction_amount": 32.5,
+  "currency": "USD",
+  "reason_code": "13.1",
+  "reason_description": "Merchandise or services not received",
+  "dispute_phase": "chargeback",
+  "dispute_status": "needs_response",
+  "dispute_received_at": "2026-09-01T10:00:00Z",
+  "response_deadline": "2026-09-25T23:59:59Z",
+  "authorization_at": "2026-08-20T12:00:00Z",
+  "capture_at": "2026-08-20T12:01:10Z",
+  "payment_method": {
+    "type": "card",
+    "brand": "visa",
+    "last4": "0002",
+    "funding": "credit"
+  },
+  "verification": {
+    "avs_result": "Y",
+    "cvv_result": "M",
+    "three_d_secure": {
+      "supported": true,
+      "authenticated": true,
+      "version": "2.2.0",
+      "result": "authenticated"
+    }
+  },
+  "network_context": {
+    "ip_address": "192.0.2.16",
+    "device_id": "device-demo-016",
+    "billing_shipping_match": true
+  },
+  "order": {
+    "product_description": "Synthetic product 016",
+    "quantity": 1,
+    "order_created_at": "2026-08-20T11:55:00Z",
+    "terms_version": "terms-2026-08",
+    "refund_policy_version": "refund-policy-2026-08"
+  },
+  "shipping": {
+    "carrier": "UPS",
+    "tracking_number": "1ZDEMO016",
+    "shipping_status": "delivered",
+    "shipped_at": "2026-08-21T09:00:00Z",
+    "delivered_at": "2026-08-24T15:30:00Z",
+    "signature_required": true,
+    "signature_obtained": true
+  },
+  "customer_communications": [
+    {
+      "channel": "email",
+      "occurred_at": "2026-08-25T09:00:00Z",
+      "direction": "outbound",
+      "summary": "Synthetic support communication 016"
+    }
+  ],
+  "refund_history": [],
+  "usage_records": [],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-df-demo-016-invoice",
+      "type": "invoice",
+      "title": "Synthetic invoice",
+      "repository_path": "disputes/artifacts/df-demo-016/invoice.json",
+      "sha256": "8f0a20d1437f59f0d81a355500de57d82d6dcab2dde69d5cd625c5a0e337b657"
+    },
+    {
+      "artifact_id": "artifact-df-demo-016-delivery_confirmation",
+      "type": "delivery",
+      "title": "Synthetic delivery confirmation",
+      "repository_path": "disputes/artifacts/df-demo-016/delivery_confirmation.json",
+      "sha256": "d30af06cde287f260183c6f239d20789b9808caece09bef4db632f0720ddfc2a"
+    },
+    {
+      "artifact_id": "artifact-df-demo-016-signature_confirmation",
+      "type": "signature",
+      "title": "Synthetic signature confirmation",
+      "repository_path": "disputes/artifacts/df-demo-016/signature_confirmation.json",
+      "sha256": "2adf16dfb2f820384b76c5f2662b7ca313034135090de66adf78855872d8b94b"
+    },
+    {
+      "artifact_id": "artifact-df-demo-016-tracking_events",
+      "type": "tracking_events",
+      "title": "Synthetic tracking events",
+      "repository_path": "disputes/artifacts/df-demo-016/tracking_events.json",
+      "sha256": "b0a960130e76af0485924a8df1e40349efaa700dd4d19e2a9d418cb8d2e60046"
+    },
+    {
+      "artifact_id": "artifact-df-demo-016-customer_communication",
+      "type": "customer_communication",
+      "title": "Synthetic customer communication",
+      "repository_path": "disputes/artifacts/df-demo-016/customer_communication.json",
+      "sha256": "1ec02256d4d0b90d225e2bd7dde023bbbb7264af4d48e2aaaeaf102406c87e94"
+    },
+    {
+      "artifact_id": "artifact-df-demo-016-terms_acceptance",
+      "type": "terms_acceptance",
+      "title": "Synthetic terms acceptance",
+      "repository_path": "disputes/artifacts/df-demo-016/terms_acceptance.json",
+      "sha256": "1936591d6b1fe8b137b2332b1a5accdead4b03e0fcace14dd35ffe9fc191c7aa"
+    },
+    {
+      "artifact_id": "artifact-df-demo-016-authentication_result",
+      "type": "authentication",
+      "title": "Synthetic authentication result",
+      "repository_path": "disputes/artifacts/df-demo-016/authentication_result.json",
+      "sha256": "6efa74d1146ea9a1c69db8e15c569f0e34c6f0c1322622e94252489f9562747f"
+    }
+  ],
+  "expected_demo_outcome": "contest"
+}

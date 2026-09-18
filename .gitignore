@@ -1,0 +1,52 @@
+# Secrets and local config — never commit real keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+.secret
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local databases and ML artifacts
+.tmp/
+*.db
+*.sqlite
+*.sqlite3
+disputeflow_checkpoints.db
+backend/data/models/*.pkl
+backend/data/models/*.json
+backend/data/synthetic/*.csv
+backend/data/real/*.csv
+
+# Node
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/vite.config.ts.timestamp-*.mjs
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+*.log
+*.zip
+.idea/
+.vscode/
+github-case-repo/
+.pytest_cache/
+_reference/
+alembic/versions/__pycache__/
+
+.vercel

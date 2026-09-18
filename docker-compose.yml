@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: disputeflow
+      POSTGRES_PASSWORD: disputeflow
+      POSTGRES_DB: disputeflow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U disputeflow -d disputeflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: .
+    expose:
+      - "8000"
+    env_file: .env
+    environment:
+      APP_ENV: production
+      DATABASE_URL: postgresql+asyncpg://disputeflow:disputeflow@db:5432/disputeflow
+      CORS_ORIGINS: http://localhost:3000
+      DISPUTE_SOURCE: github
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build: ./frontend
+    environment:
+      API_KEY: ${API_KEY}
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  pgdata:

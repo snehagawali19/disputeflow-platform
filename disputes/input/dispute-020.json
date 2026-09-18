@@ -1,0 +1,88 @@
+{
+  "dispute_id": "df-demo-020",
+  "processor": "stripe",
+  "processor_transaction_id": "ch_demo_020",
+  "payment_intent_id": "pi_demo_020",
+  "order_id": "order-demo-020",
+  "customer_id": "cus_demo_020",
+  "merchant_name": "Demo Merchant 020",
+  "customer": {
+    "name": "Synthetic Customer 020",
+    "email": "customer020@example.test"
+  },
+  "dispute_amount": 120.0,
+  "transaction_amount": 120.0,
+  "currency": "USD",
+  "reason_code": "13.1",
+  "reason_description": "Merchandise or services not received",
+  "dispute_phase": "chargeback",
+  "dispute_status": "needs_response",
+  "dispute_received_at": "2026-09-01T10:00:00Z",
+  "response_deadline": "2026-09-25T23:59:59Z",
+  "authorization_at": "2026-08-20T12:00:00Z",
+  "capture_at": "2026-08-20T12:01:10Z",
+  "payment_method": {
+    "type": "card",
+    "brand": "visa",
+    "last4": "4242",
+    "funding": "credit"
+  },
+  "verification": {
+    "avs_result": "Y",
+    "cvv_result": "M",
+    "three_d_secure": {
+      "supported": true,
+      "authenticated": true,
+      "version": "2.2.0",
+      "result": "authenticated"
+    }
+  },
+  "network_context": {
+    "ip_address": "192.0.2.20",
+    "device_id": "device-demo-020",
+    "billing_shipping_match": true
+  },
+  "order": {
+    "product_description": "Synthetic product 020",
+    "quantity": 1,
+    "order_created_at": "2026-08-20T11:55:00Z",
+    "terms_version": "terms-2026-08",
+    "refund_policy_version": "refund-policy-2026-08"
+  },
+  "shipping": {
+    "carrier": "USPS",
+    "tracking_number": "",
+    "shipping_status": "delivered",
+    "shipped_at": "2026-08-21T09:00:00Z",
+    "delivered_at": "2026-08-24T15:30:00Z",
+    "signature_required": true,
+    "signature_obtained": false
+  },
+  "customer_communications": [
+    {
+      "channel": "email",
+      "occurred_at": "2026-08-25T09:00:00Z",
+      "direction": "outbound",
+      "summary": "Synthetic support communication 020"
+    }
+  ],
+  "refund_history": [],
+  "usage_records": [],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-df-demo-020-invoice",
+      "type": "invoice",
+      "title": "Synthetic invoice",
+      "repository_path": "disputes/artifacts/df-demo-020/invoice.json",
+      "sha256": "bb0f1baf2ddd0486418341b21a73be05e198e2239c6785ccdbe307ac27ad2f18"
+    },
+    {
+      "artifact_id": "artifact-df-demo-020-order_record",
+      "type": "order",
+      "title": "Synthetic order record",
+      "repository_path": "disputes/artifacts/df-demo-020/order_record.json",
+      "sha256": "9cc71d98a80bffc5d2bbdcdb3c3105a15118a72bd3911cfc1d185e84351f607d"
+    }
+  ],
+  "expected_demo_outcome": "human_review"
+}

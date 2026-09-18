@@ -1,0 +1,94 @@
+{
+  "dispute_id": "df-demo-010",
+  "processor": "stripe",
+  "processor_transaction_id": "ch_demo_010",
+  "payment_intent_id": "pi_demo_010",
+  "order_id": "order-demo-010",
+  "customer_id": "cus_demo_010",
+  "merchant_name": "Demo Merchant 010",
+  "customer": {
+    "name": "Synthetic Customer 010",
+    "email": "customer010@example.test"
+  },
+  "dispute_amount": 14.0,
+  "transaction_amount": 14.0,
+  "currency": "USD",
+  "reason_code": "subscription_canceled",
+  "reason_description": "Canceled recurring transaction",
+  "dispute_phase": "chargeback",
+  "dispute_status": "needs_response",
+  "dispute_received_at": "2026-09-01T10:00:00Z",
+  "response_deadline": "2026-09-25T23:59:59Z",
+  "authorization_at": "2026-08-20T12:00:00Z",
+  "capture_at": "2026-08-20T12:01:10Z",
+  "payment_method": {
+    "type": "card",
+    "brand": "visa",
+    "last4": "4242",
+    "funding": "credit"
+  },
+  "verification": {
+    "avs_result": "Y",
+    "cvv_result": "M",
+    "three_d_secure": {
+      "supported": true,
+      "authenticated": true,
+      "version": "2.2.0",
+      "result": "authenticated"
+    }
+  },
+  "network_context": {
+    "ip_address": "192.0.2.10",
+    "device_id": "device-demo-010",
+    "billing_shipping_match": true
+  },
+  "order": {
+    "product_description": "Synthetic product 010",
+    "quantity": 1,
+    "order_created_at": "2026-08-20T11:55:00Z",
+    "terms_version": "terms-2026-08",
+    "refund_policy_version": "refund-policy-2026-08"
+  },
+  "shipping": null,
+  "customer_communications": [
+    {
+      "channel": "email",
+      "occurred_at": "2026-08-25T09:00:00Z",
+      "direction": "outbound",
+      "summary": "Synthetic support communication 010"
+    }
+  ],
+  "refund_history": [],
+  "usage_records": [],
+  "artifacts": [
+    {
+      "artifact_id": "artifact-df-demo-010-invoice",
+      "type": "invoice",
+      "title": "Synthetic invoice",
+      "repository_path": "disputes/artifacts/df-demo-010/invoice.json",
+      "sha256": "15af23d07d14d4c6e47c908fecfddf3698b34aae1ade84130858babb9148d3dd"
+    },
+    {
+      "artifact_id": "artifact-df-demo-010-terms_acceptance",
+      "type": "terms_acceptance",
+      "title": "Synthetic terms acceptance",
+      "repository_path": "disputes/artifacts/df-demo-010/terms_acceptance.json",
+      "sha256": "7d307e60cacd5410e8f217048b2f1ac095663f0809e44f94b1f97f5b67466171"
+    },
+    {
+      "artifact_id": "artifact-df-demo-010-customer_communication",
+      "type": "customer_communication",
+      "title": "Synthetic customer communication",
+      "repository_path": "disputes/artifacts/df-demo-010/customer_communication.json",
+      "sha256": "92f76ea0b761500455680556a1bb4f9830c7da0e4d21ce74f634283a0aa31f4a"
+    },
+    {
+      "artifact_id": "artifact-df-demo-010-order_record",
+      "type": "order",
+      "title": "Synthetic order record",
+      "repository_path": "disputes/artifacts/df-demo-010/order_record.json",
+      "sha256": "bd3fabbe8ff9b83ea6f9f80b203cd4822ce3d2e7f6cbc8152d7c90e5ff189714"
+    }
+  ],
+  "expected_demo_outcome": "contest"
+}
